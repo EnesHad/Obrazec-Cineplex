@@ -1,0 +1,212 @@
+*{
+    margin:0;
+	padding:0;
+}
+Html, body { 
+    width:100%; 
+    height:100%;
+}
+body{
+	background: #161925;
+}
+
+.main{
+	width: 100%;
+	height: 100%;
+}
+.head{
+	height: 80px;
+	padding: 10px;
+	font-family: italic;
+	font-size:20px;
+	text-align: center;
+  	justify-content: center;
+}
+.bot{
+	margin: 40px;
+}
+
+.text{
+    color: #8ea8c3;
+	font-family: 'Franklin Gothic Medium';
+}
+.mid{
+    padding: 5px;
+    display:flex;
+	margin:auto;
+	width:80%;
+	height: 750px;;
+	border: rgba(0, 0, 0, 0.212) solid 3px;
+	border-radius: 15px;
+}
+.Ldiv{
+    height: 100%;
+    width: 65%;
+}
+table{
+    width: 100%;
+    height: 100%;
+}
+form{
+    width: 100%;
+    height: 100%;
+}
+ul{
+  list-style: none;  
+}
+.left{
+    float: left;
+    height: 100%;
+    width: 70%;
+}
+.right{
+    float: right;
+    height: 100%;
+    width: 30%;
+}
+.center{
+    display: grid;
+    place-items: center;
+}
+
+h2, h5{
+    text-align: center;
+}
+.cover{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 100%;
+    background-image: url(../img/create.png);
+    background-size: 100% 100%;
+}
+.description{
+    padding: 10px;
+    width: 97%;
+    height: 25%;
+}
+.buy{
+    width: 100%;
+    height: 72%;
+    padding: 0%;
+}
+.chek{
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+}
+.block{
+    background-color: #22273d;
+
+}
+.num{
+    background-image: url(../img/seat.png);
+    background-size: 100% 100%;
+}
+a{
+    text-decoration: none;
+}
+.name{
+    font-size: 45px;
+    text-decoration: none;
+}
+.name2{
+    font-size: 25px;
+    text-decoration: none;
+}
+.leg{
+    width: 30%;
+    height: 66%;
+    float: left;
+    background: #161925;    
+}
+.top{
+    height: 40%;
+}
+.rad{
+    height: 60%;
+}
+
+.seat{
+    float: left;
+    width: 70%;
+    height: 66%;
+    background:#161925;
+}
+.seat a{
+    color: rgb(33, 65, 60);
+    font-family: Helvetica;
+    font-size: 20px;
+}
+.seet .taken{
+    background-color: rgb(60, 50, 116);
+}
+.Stab tr{
+    height: 12.5%;
+    text-align: center;
+}
+
+.Stab tr td:focus{
+    background: rgb(156, 10, 175);
+}
+
+.Stab .seet td:has(.chek:checked){
+    background-color: yellowgreen;
+}
+.butt{
+    float: right;
+    width: 100%;
+    height: 34%;
+}
+input[type=submit]{
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.te{
+    float: left;
+    height: 100%;
+    width: 25%;
+    text-align: center;
+}
+.in{
+    float: right;
+    height: 100%;
+    width: 75%;
+}
+
+@media screen and (max-width: 900px) {
+    .mid{
+        height: 1250px;
+        display: flex;
+        flex-direction: column;
+    }
+    .cover{
+        height: 85%;
+    }
+    .Ldiv, .cover{
+        width: 100%;
+    }
+    .description{
+        height: 30%;
+    }
+    .buy{
+        height: 66%;
+    }
+    input[type=submit]{
+        background-color: #04AA6D;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    .bot{
+        height: 75px;
+    }
+}

@@ -1,0 +1,139 @@
+*{
+    margin:0;
+	padding:0;
+}
+Html, body { 
+    width:100%; 
+    height:100%;
+}
+body{
+	background: #161925;
+}
+.main{
+	width: 100%;
+	height: 100%;
+}
+.head{
+	height: 80px;
+	padding: 10px;
+	font-family: italic;
+	font-size:20px;
+	text-align: center;
+  	justify-content: center;
+}
+.name{
+    font-size: 45px;
+    text-decoration: none;
+}
+.name2{
+    font-size: 25px;
+    text-decoration: none;
+}
+.bot{
+	margin: 40px;
+}
+.text{
+	color: #8ea8c3;
+	font-family: 'Franklin Gothic Medium';
+}
+.mid{
+	margin:auto;
+	width:60%;
+	height:80%;
+	border: black 3px solid;
+	padding: 10px;
+	border-radius: 15px;
+}
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	width:100%;
+	height:100%;
+}
+
+.film{
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+	width: 24%;
+	height: 48%;
+	position: relative;
+	cursor: pointer;
+}
+a{
+	width: 23%;
+	height: 45%;
+	text-decoration: none;
+}
+.opis{
+	font-family: 'Courier';
+	display: block;
+    width: 94%;
+	height: 96.7%;
+	color: #8cb2da;
+	background: rgba(0, 0, 0, 0.850);
+	opacity: 0;
+    transition: opacity 0.3s;
+	padding: 3%;
+	
+}
+
+.film:hover{
+	.opis{
+		opacity: 1;
+	}
+}
+
+@media screen and (max-width: 900px) {
+    .mid{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+	.container{
+		width:100%;
+		height:100%;
+	}
+	.film{
+        margin: 5px;
+		width: 100%;
+        height: 550px;
+	}
+}
+
+
+
+.barbie{
+	background-image: url(img/barbie.jpg);
+	background-size: 100% 100%;
+}
+.dogman{
+	background-image: url(img/dogman.jpg);
+	background-size: 100% 100%;
+}
+.the_creator{
+	background-image: url(img/create.png);
+	background-size: 100% 100%;
+}
+.ss{
+	background-image: url(img/ss.png);
+	background-size: 100% 100%;
+}
+.sing{
+	background-image: url(img/sing2.png);
+	background-size: 100% 100%;
+}
+.jp{
+	background-image: url(img/jp.png);
+	background-size: 100% 100%;
+}
+.tmnt{
+	background-image: url(img/tmnt.png);
+	background-size: 100% 100%;
+}
+.tag{
+	background-image: url(img/tag.png);
+	background-size: 100% 100%;
+}
