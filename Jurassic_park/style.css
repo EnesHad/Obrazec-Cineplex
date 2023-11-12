@@ -7,7 +7,7 @@ Html, body {
     height:100%;
 }
 body{
-	background: #161925;
+	background: #161a1d;
 }
 
 .main{
@@ -27,16 +27,16 @@ body{
 }
 
 .text{
-    color: #8ea8c3;
-	font-family: 'Franklin Gothic Medium';
+    color: #4cc9f0;
+	font-family: adero;
+    font-size: 19px;
 }
 .mid{
     padding: 5px;
     display:flex;
 	margin:auto;
 	width:80%;
-	height: 750px;;
-	border: rgba(0, 0, 0, 0.212) solid 3px;
+	height: 750px;
 	border-radius: 15px;
 }
 .Ldiv{
@@ -96,12 +96,14 @@ h2, h5{
     width: 100%;
 }
 .block{
-    background-color: #22273d;
+    background-color: rgba(73, 73, 95, 0.239)
 
 }
 .num{
     background-image: url(../img/seat.png);
-    background-size: 100% 100%;
+    background-position: center center;
+    background-size: 80%;
+    background-repeat: no-repeat;
 }
 a{
     text-decoration: none;
@@ -118,7 +120,7 @@ a{
     width: 30%;
     height: 66%;
     float: left;
-    background: #161925;    
+    background: #161a1d;    
 }
 .top{
     height: 40%;
@@ -131,23 +133,17 @@ a{
     float: left;
     width: 70%;
     height: 66%;
-    background:#161925;
+    background:#161a1d;
 }
 .seat a{
     color: rgb(33, 65, 60);
     font-family: Helvetica;
     font-size: 20px;
 }
-.seet .taken{
-    background-color: rgb(60, 50, 116);
-}
+
 .Stab tr{
     height: 12.5%;
     text-align: center;
-}
-
-.Stab tr td:focus{
-    background: rgb(156, 10, 175);
 }
 
 .Stab .seet td:has(.chek:checked){
@@ -174,9 +170,12 @@ input[type=submit]{
     text-align: center;
 }
 .in{
-    float: right;
-    height: 100%;
-    width: 75%;
+    padding-top: 25px;
+    padding-left: 25px;
+}
+.tab2{
+    width: 400px;
+    border-spacing: 10px;
 }
 
 @media screen and (max-width: 900px) {
@@ -209,4 +208,8 @@ input[type=submit]{
     .bot{
         height: 75px;
     }
+}
+@font-face {
+	font-family: adero;
+	src: url(../figtree/fonts/otf/Figtree-SemiBoldItalic.otf);
 }

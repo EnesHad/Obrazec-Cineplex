@@ -8,6 +8,15 @@
 	</head>
 
 	<body>
+		<style>
+			/* Style to add a scrollbar to the container */
+			.scroll-container {
+			  width: 94%; /* Set a fixed width for the container */
+			  height: 100%; /* Set a fixed height for the container */
+			  overflow: auto; /* Add a scrollbar when content overflows */
+			}
+		</style>
+
 		<div class="main">
 			<div class="head text">
 				<div>
@@ -19,17 +28,18 @@
 			<!--MID-->
 
 			<div class="mid">
+				<div class="izberi2">Klikni na želeni ogledani filem</div>
 				<div class="container">
                     <div class="film barbie" onclick="navigateToPage('Barbi/barbi.html')">
-                        <span class="opis">
-								<h1>Barbi</h1><br>
+                        <span class="opis scroll-container">
+								<h1>Barbie</h1><br>
 								<p>Žanra: Pustolovski film, Fantazijski film, Komedija</p><br>
 								<p>Država / Letnik:	USA, GBR/2023</p><br>
 								<p>Živeti v Barbie deželi pomeni biti popolno bitje na popolnem mestu. Razen, če imaš popolno krizo eksistence. Ali pa si Ken.</p>
 							</span>
                     </div>
                     <div class="film dogman" onclick="navigateToPage('Dogman/dogman.html')">
-                        <span class="opis">
+                        <span class="opis scroll-container">
 								<h1>Dogman</h1><br>
 								<p>Žanra: Drama</p><br>
 								<p>Država / Letnik:	FRA, USA/2023</p><br>
@@ -37,7 +47,7 @@
 							</span>
                     </div>
                     <div class="film the_creator" onclick="navigateToPage('Creator/creator.html')">
-                        <span class="opis">
+                        <span class="opis scroll-container">
 								<h1>The Creator</h1><br>
 								<p>Žanra: Znanstvena fantastika</p><br>
 								<p>Država / Letnik: USA/2023</p><br>
@@ -45,7 +55,7 @@
 							</span>
                     </div>
                     <div class="film ss" onclick="navigateToPage('Suicide_Squad/ss.html')">
-                        <span class="opis">
+                        <span class="opis scroll-container">
 								<h1>Suicide Squad</h1><br>
 								<p>Žanra: 	Fantazijski film, Pustolovski film</p><br>
 								<p>Država / Letnik:	USA/2016</p><br>
@@ -54,7 +64,7 @@
 							</span>
                     </div>
                     <div class="film sing" onclick="navigateToPage('Sing2/sing2.html')">
-                        <span class="opis">
+                        <span class="opis scroll-container">
 								<h1>Sing 2</h1><br>
 								<p>Žanra: Animirani film, Komedija</p><br>
 								<p>Država / Letnik: USA/2021</p><br>
@@ -63,7 +73,7 @@
 							</span>
                     </div>
                     <div class="film jp" onclick="navigateToPage('Jurassic_park/jp.html')">
-                        <span class="opis">
+                        <span class="opis scroll-container">
 								<h1>Jurasik Park</h1><br>
 								<p>Žanra: Akcijski film, Pustolovski film</p><br>
 								<p>Država / Letnik:	USA/2015</p><br>
@@ -72,15 +82,15 @@
 							</span>
                     </div>
                     <div class="film tmnt" onclick="navigateToPage('TMNT/tmnt.html')">
-                        <span class="opis">
-								<h1>Teen Mutant Ninja Turtles</h1><br>
+                        <span class="opis scroll-container">
+								<h1>Teenage Mutant Ninja Turtles</h1><br>
 								<p>Žanra: Animirani film, Akcijski film, Pustolovski film</p><br>
 								<p>Država / Letnik:	USA/2023</p><br>
 								<p>ŽNova generacija junakov se dviga naravnost iz kanalizacije.</p>
 							</span>
                     </div>
                     <div class="film tag" onclick="navigateToPage('Tag/tag.html')">
-                        <span class="opis">
+                        <span class="opis scroll-container">
 								<h1>TAG</h1><br>
 								<p>Žanra: 	Komedija</p><br>
 								<p>Država / Letnik:	USA/2018</p><br>
@@ -88,6 +98,7 @@
 							</span>
                     </div>
                 </div>
+				<div class="izberi text">Klikni te na zaželjeni ogledani filem</div>
 			</div>
 			<!--FOOT-->
 			<div class="bot">
@@ -97,6 +108,7 @@
 			function navigateToPage(page) {
 				window.location.href = page;
 			}
+			
 		</script>
 	</body>
 

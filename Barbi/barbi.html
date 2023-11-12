@@ -42,8 +42,8 @@
                     <div class="buy">
                             
                                 <div class="leg center text">
-                                    <h2><a style="background-color: #22273d; color: #22273d;">red</a> - zasedeno</h2>
-                                    <h2><a style="background-color: yellowgreen; color: yellowgreen;">red</a> - izbrano</h2>
+                                    <h2><a style="background-color:rgba(73, 73, 95, 0.239); color: rgba(73, 73, 95, 0); ">---</a> - zasedeno</h2>
+                                    <h2><a style="background-color: yellowgreen; color: yellowgreen;">---</a> - izbrano</h2>
                                     <h2> Cena 1 karte je 5€</h2><br>
                                     <h5>* obvezno izpolnite</h5>
 
@@ -121,20 +121,28 @@
                                 </div>
                                 <div class="butt">
                                     <div class="left">
-                                        <div class="te center text">
-                                            <br>
-                                            ime* <br><br>
-                                            priimek* <br><br>
-                                            email <br><br>
-                                            tel* <br><br>
+                                        <div class="text in">
+                                            <table class="tab2">
+                                                <tr>
+                                                    <td>ime * </td>
+                                                    <td><input type="text" placeholder="Janez" required id="text" name="text" maxlength="50" oninput="enforceLettersOnly(this)"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>priimek * </td>
+                                                    <td><input type="text" placeholder="Novak" required id="text" name="text" maxlength="50" oninput="enforceLettersOnly(this)"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>email</td>
+                                                    <td><input type="email" placeholder="info@cineplex.si" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>tel *</td>
+                                                    <td><input type="text" placeholder="000-000-000" required id="phone" name="phone" maxlength="11" oninput="formatPhoneNumber(this)"></td>
+                                                </tr>
+                                            </table>
+                                            
                                         </div>
-                                        <div class="in">
-                                            <br>
-                                            <input type="text" placeholder="Janez" required id="text" name="text" maxlength="50" oninput="enforceLettersOnly(this)"> <br><br>
-                                            <input type="text" placeholder="Novak" required id="text" name="text" maxlength="50" oninput="enforceLettersOnly(this)"> <br><br>
-                                            <input type="email" placeholder="info@cineple.si" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" > <br><br>
-                                            <input type="text" placeholder="000-000-000" required id="phone" name="phone" maxlength="11" oninput="formatPhoneNumber(this)"> <br><br>
-                                        </div>
+                                        
                                     </div>
                                     <div class="right center"><input type="submit" id="submitButton" value="REZERVIRAJ" > </div>
                                 </div>
@@ -145,25 +153,33 @@
                                 function showSweetAlert() {
                                     const checkboxes = document.querySelectorAll('#checkboxForm input[type="checkbox"]');
                                     let atLeastOneChecked = false;
-                        
+
                                     checkboxes.forEach(function (checkbox) {
                                         if (checkbox.checked) {
                                             atLeastOneChecked = true;
                                             return; // At least one checkbox is checked, no need to continue the loop
                                         }
                                     });
-                        
+
                                     if (atLeastOneChecked) {
+                                        // Display SweetAlert with a timer
                                         Swal.fire({
                                             title: 'Rezervirano',
                                             text: 'Uspešno ste rezervirali',
                                             icon: 'success',
-                                            confirmButtonText: 'OK'
-                                        }).then((result) => {
-                                            if (result.isConfirmed) {
-                                                document.getElementById("checkboxForm").submit(); // Submit the form
+                                            showConfirmButton: false,
+                                            timer: 5000,  // Set the timer to 5 seconds
+                                            timerProgressBar: true,
+                                            onClose: () => {
+                                                // Submit the form
+                                                document.getElementById("checkboxForm").submit();
                                             }
                                         });
+
+                                        // Redirect to ../index.html after the form is submitted
+                                        setTimeout(function () {
+                                            window.location.href = '../index.html';
+                                        }, 5000); // Redirect after 5 seconds
                                     } else {
                                         // Show the SweetAlert even when conditions are not met
                                         Swal.fire({
